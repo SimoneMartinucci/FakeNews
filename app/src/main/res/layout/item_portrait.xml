@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/item_portrait_imageview"
+        android:layout_width="@dimen/item_portrait_size"
+        android:layout_height="@dimen/item_portrait_size"
+        tools:src="@drawable/fakenewslogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_portrait_title_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@id/item_portrait_imageview"
+        app:layout_constraintBottom_toTopOf="@id/item_portrait_desc_textview"
+        app:layout_constraintStart_toEndOf="@id/item_portrait_imageview"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/item_portrait_desc_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
+        tools:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/item_portrait_title_textview"
+        app:layout_constraintBottom_toBottomOf="@id/item_portrait_imageview"
+        app:layout_constraintEnd_toEndOf="@id/item_portrait_title_textview"
+        app:layout_constraintStart_toStartOf="@id/item_portrait_title_textview"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

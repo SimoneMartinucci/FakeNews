@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_title_padding">10dp</dimen>
+    <dimen name="item_landscape_width">292dp</dimen>
+    <dimen name="item_landscape_height">164dp</dimen>
+    <dimen name="item_landscape_title_margin">10dp</dimen>
+    <dimen name="item_portrait_size">100dp</dimen>
+</resources>

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import it.itsacademy.fakenews.R
 import it.itsacademy.fakenews.core.viewmodel.HomeViewModel
 import it.itsacademy.fakenews.databinding.FragmentHomeBinding
+import it.itsacademy.fakenews.ui.home.adapter.HomeRowAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -19,7 +20,13 @@ class HomeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        homeViewModel.postLiveData.observe(this){rowList ->
+            with(binding){
+                homeRecyclerview.run {
+                    adapter = HomeRowAdapter(rowList)
+                }
+            }
+        }
     }
 
     override fun onResume() {

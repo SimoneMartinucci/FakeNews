@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="it.itsacademy.fakenews.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newsPageFragment"
+            app:destination="@id/newsPageFragment" >
+            <argument
+                android:name="newsTitle"
+                app:argType="string"
+                android:defaultValue=""/>
+            <argument
+                android:name="newsDesc"
+                app:argType="string"
+                android:defaultValue=""
+                />
+            <argument
+                android:name="newsImageUrl"
+                app:argType="string"
+                android:defaultValue=""
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/newsPageFragment"
+        android:name="it.itsacademy.fakenews.ui.newspage.NewsPageFragment"
+        android:label="fragment_news_page"
+        tools:layout="@layout/fragment_news_page" />
+</navigation>
